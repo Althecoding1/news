@@ -1,0 +1,38 @@
+{
+  "name": "typo-world-news",
+  "version": "0.0.1",
+  "description": "a world news server for specifc topics",
+  "main": "server.js",
+  "author": "Typos",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "chron": "0.0.4",
+    "express": "latest",
+    "limiter": "^1.1.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "request-promise": "^3.0.0",
+    "rss-parser": "git://github.com/Elbertlum/rss-parser.git",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1"
+  },
+  "scripts": {
+    "start": "nodemon server/static/server.js",
+    "nodal": "cd server/api && nodal db:bootstrap && nodal s",
+    "deps": "npm install && npm run client-deps && npm run api-deps",
+    "client-deps": "cd client/ && npm install",
+    "api-deps": "cd server/api && npm install"
+  }
+}
